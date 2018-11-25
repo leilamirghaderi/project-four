@@ -154,7 +154,7 @@ nav a:focus {
   margin: 0.3em;
 }
 #primary h2 {
-  padding-left: 0.5em;
+  padding-bottom: 0.5em;
 }
 #graduation {
   display: block;
@@ -225,8 +225,8 @@ figcaption {
     margin-right: 0.2em;
   }
   nav a {
-    padding: 0.5em 0;
-    margin: 0.5%;
+    padding: 1em 0;
+    margin: 1%;
   }
   header img {
     display: block;
