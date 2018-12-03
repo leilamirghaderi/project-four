@@ -22,10 +22,10 @@ figcaption {
   text-align: center;
 }
 h2 {
-  font-family: "Acme", Helvetica , Arial, sans-serif;
+    font-family: "Acme", Helvetica , Arial, sans-serif;
   font-size: 1.4em;
   line-height: 1.28em; /* 36px /  28px= 1.28em*/
-font-weight: bold;
+  font-weight: bold;
 }
 p {
   font-size: 1.125em; /*18px /*16 = 1.125em */
@@ -193,20 +193,37 @@ figcaption {
   color: white;
 }
 /* State style (media queries) */
-}
-@media screen and (min-width: 440px) {
-  #navigation a {
-    line-height: 1.75em; /*28px /*16 = 1.75em */
-  }
 
-  #header article {
+@media screen and (min-width: 99px) {
+  body #header {
+      display: flex;
+      flex-flow: column;
+  }
+ h2 {
     display: flex;
-    flex: 3 0;
+    font-size: 1.01em;
+    margin-right: 0.2em;
+  }
+}
+@media screen and (min-width: 250px) {
+  body #header {
+      display: grid;
+    }
+  }
+@media screen and (min-width: 440px) {
+  html {
+    font-size: 1.31em; /*21px /*16 = 1.31em */
+    line-height: 1.38em; /*29px /*21 = 1.38em */
+  }
+  body #header {
+      display: grid;
+    }
+#header article {
+    display: flex;
+    flex: 0 1 75px;
   }
   header img {
-    display: block;
-    width: 75px;
-    height: 104px;
+  flex: 0 1 75px;
   }
   h2 {
     font-size: 1em;
@@ -216,12 +233,22 @@ figcaption {
     padding: 0.7em 0;
     margin: 0.8%;
   }
+  #navigation a {
+    line-height: 1.75em; /*28px /*16 = 1.75em */
+  }
 }
 @media screen and (min-width: 448px) {
   html {
     font-size: 1.31em; /*21px /*16 = 1.31em */
     line-height: 1.38em; /*29px /*21 = 1.38em */
   }
+  #header article {
+    display: flex;
+    flex: 0 1 75px;
+  }
+  header img {
+  flex: 0 1 75px;
+}
   #heading h2 {
     display: flex;
     font-size: 1em;
@@ -231,10 +258,30 @@ figcaption {
     padding: 1em 0;
     margin: 1%;
   }
+  #navigation a {
+    line-height: 2em;
+  }
+}
+@media screen and (min-width: 450px) {
+  html {
+    font-size: 1.31em; /*21px /*16 = 1.31em */
+    line-height: 1.38em; /*29px /*21 = 1.38em */
+  }
+  #header article {
+    display: flex;
+    flex: 0 1 50px;
+  }
   header img {
-    display: block;
-    width: 140px;
-    height: 213px;
+  flex: 0 1 50px;
+}
+  #heading h2 {
+    font-size: 1em;
+    margin-right: 0.2em;
+  }
+
+  nav a {
+    padding: 0.6em 0;
+    margin: 0.5%;
   }
   #navigation a {
     line-height: 2em;
@@ -245,51 +292,84 @@ figcaption {
       font-size: 1.31em; /*21px /*16 = 1.31em */
       line-height: 1.38em; /*29px /*21 = 1.38em */
     }
+    header img {
+    flex: 0 1 140px;
+  }
     #header article {
       display: flex;
-      flex: 2 0;
+      flex: 0 1 140px;
     }
     #heading h2 {
-      font-size: 1.2em;
+      font-size: 1.4em;
       margin-right: 0.2em;
     }
-    nav a {
-      padding: 0.5em 0;
-      margin: 0.5%;
-    }
-    header img {
-      display: block;
-      width: 140px;
-      height: 213px;
-    }
-    #navigation a {
-      line-height: 2em;
-    }
-
+  #navigation a {
+    line-height: 2em;
   }
+  nav a {
+    padding: 0.5em 0;
+    margin: 0.5%;
+  }
+}
   @media screen and (min-width: 920px) {
     html {
       font-size: 1.626em; /*26px /*16 = 1.625em */
       line-height: 1.07em; /*28px /*26 = 1.07em */
     }
-    nav a {
-      padding: 0.5em 0;
-      margin: 0.5%;
-    }
     #heading h2 {
-      font-size: 1.5em;
+      font-size: 1.47em;
     }
-    header img {
-      width: 180px;
-      height: 273px;
+  header img {
+  flex: 0 1 180px;
     }
     #header article {
       display: flex;
-      flex: 2 0;
+      flex: 0 1 180px;
     }
     #navigation a {
       font-size: 1.37em; /*22px /*16 = 1.37em */
       line-height: 2em;
     }
+    nav a {
+      padding: 0.5em 0;
+      margin: 0.5%;
+    }
+}
+  @media screen and (min-width: 920px) {
+    html {
+      font-size: 1.626em; /*26px /*16 = 1.625em */
+      line-height: 1.07em; /*28px /*26 = 1.07em */
+    }
+    #heading h2 {
+      font-size: 1.47em;
+    }
+  header img {
+  flex: 0 1 180px;
+    }
+    #header article {
+      display: flex;
+      flex: 0 1 180px;
+    }
+    #navigation a {
+      font-size: 1.37em; /*22px /*16 = 1.37em */
+      line-height: 2em;
+    }
+    nav a {
+      padding: 0.5em 0;
+      margin: 0.5%;
+    }
 
   }
+    @media screen and (min-width: 1180px) {
+      #heading h2 {
+        font-size: 1.9em;
+      }
+      header img {
+      flex: 0 1 180px;
+
+    }
+        #header article {
+          display: flex;
+          flex: 0 1 180px;
+        }
+      }
