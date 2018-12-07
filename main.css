@@ -212,6 +212,14 @@ figcaption {
   body #header {
       display: grid;
     }
+    #heading h2 {
+      padding-top: 0.3em;
+      font-size: 1em;
+    }
+    nav a {
+      padding: 1em 0;
+      margin: 5%;
+    }
   }
 @media screen and (min-width: 440px) {
   html {
@@ -223,14 +231,17 @@ figcaption {
     }
 #header article {
     display: flex;
-    flex: 0 1 75px;
-  }
-  header img {
-  flex: 0 1 75px;
+    flex: 0 1;
   }
   h2 {
     font-size: 1em;
     margin-right: 0.2em;
+  }
+  #heading h2 {
+    font-size: 0.85em;
+  }
+  #heading img {
+    padding-top: 0.45em;
   }
   nav a {
     padding: 0.7em 0;
@@ -240,31 +251,6 @@ figcaption {
     line-height: 1.75em; /*28px /*16 = 1.75em */
   }
 }
-@media screen and (min-width: 448px) {
-  html {
-    font-size: 1.31em; /*21px /*16 = 1.31em */
-    line-height: 1.38em; /*29px /*21 = 1.38em */
-  }
-  #header article {
-    display: flex;
-    flex: 0 1 75px;
-  }
-  header img {
-  flex: 0 1 75px;
-}
-  #heading h2 {
-    display: flex;
-    font-size: 1em;
-    margin-right: 0.2em;
-  }
-  nav a {
-    padding: 1em 0;
-    margin: 1%;
-  }
-  #navigation a {
-    line-height: 2em;
-  }
-}
 @media screen and (min-width: 450px) {
   html {
     font-size: 1.31em; /*21px /*16 = 1.31em */
@@ -272,16 +258,15 @@ figcaption {
   }
   #header article {
     display: flex;
-    flex: 0 1 50px;
+    flex: 0 1;
   }
-  header img {
-  flex: 0 1 50px;
-}
   #heading h2 {
-    font-size: 1em;
+    font-size: 0.85em;
     margin-right: 0.2em;
   }
-
+  #heading img {
+    padding-top: 0.35em;
+  }
   nav a {
     padding: 0.6em 0;
     margin: 0.5%;
@@ -295,15 +280,12 @@ figcaption {
       font-size: 1.31em; /*21px /*16 = 1.31em */
       line-height: 1.38em; /*29px /*21 = 1.38em */
     }
-    header img {
-    flex: 0 1 140px;
-  }
     #header article {
       display: flex;
-      flex: 0 1 140px;
+      flex: 0 1;
     }
     #heading h2 {
-      font-size: 1.4em;
+      font-size: 1.3em;
       margin-right: 0.2em;
     }
   #navigation a {
@@ -314,20 +296,13 @@ figcaption {
     margin: 0.5%;
   }
 }
-  @media screen and (min-width: 920px) {
-    html {
-      font-size: 1.626em; /*26px /*16 = 1.625em */
-      line-height: 1.07em; /*28px /*26 = 1.07em */
-    }
+  @media screen and (min-width: 800px) {
     #heading h2 {
-      font-size: 1.47em;
-    }
-  header img {
-  flex: 0 1 180px;
+      font-size: 1.8em;
     }
     #header article {
       display: flex;
-      flex: 0 1 180px;
+      flex: 0 1;
     }
     #navigation a {
       font-size: 1.37em; /*22px /*16 = 1.37em */
@@ -337,42 +312,88 @@ figcaption {
       padding: 0.5em 0;
       margin: 0.5%;
     }
+  }
+  @media screen and (min-width: 920px) {
+    html {
+      font-size: 1.626em; /*26px /*16 = 1.625em */
+      line-height: 1.07em; /*28px /*26 = 1.07em */
+    }
+    #heading h2 {
+      font-size: 1.55em;
+    }
+    #header article {
+      display: flex;
+      flex: 0 1;
+    }
+    #navigation a {
+      font-size: 1.37em; /*22px /*16 = 1.37em */
+      line-height: 2em;
+    }
+    nav a {
+      padding: 0.4em 0;
+      margin: 0.4%;
+    }
+@media screen and (min-width: 1000px) {
+  #heading h2 {
+    font-size: 1.8em;
+  }
+  h2{
+    font-size: 1.5em;
+  }
+#header article {
+  display: flex;
+  flex: 0 1;
 }
-  @media screen and (min-width: 920px) {
-    html {
-      font-size: 1.626em; /*26px /*16 = 1.625em */
-      line-height: 1.07em; /*28px /*26 = 1.07em */
-    }
-    #heading h2 {
-      font-size: 1.47em;
-    }
-  header img {
-  flex: 0 1 180px;
-    }
-    #header article {
-      display: flex;
-      flex: 0 1 180px;
-    }
-    #navigation a {
-      font-size: 1.37em; /*22px /*16 = 1.37em */
-      line-height: 2em;
-    }
-    nav a {
-      padding: 0.5em 0;
-      margin: 0.5%;
-    }
-
+nav a {
+  padding: 0.5em 0;
+  margin: 0.5%;
+}
   }
     @media screen and (min-width: 1180px) {
       #heading h2 {
-        font-size: 1.9em;
+        font-size: 2.1em;
       }
-      header img {
-      flex: 0 1 180px;
-
-    }
+      h2{
+        font-size: 1.5em;
+      }
         #header article {
           display: flex;
-          flex: 0 1 180px;
+          flex: 0 1;
+        }
+        nav a {
+          padding: 0.5em 0;
+          margin: 0.5%;
         }
       }
+        @media screen and (min-width: 1226px) {
+          #heading h2 {
+            font-size: 2.1em;
+          }
+          h2{
+            font-size: 1.5em;
+          }
+            #header article {
+              display: flex;
+              flex: 0 1;
+            }
+            nav a {
+              padding: 0.5em 0;
+              margin: 0.5%;
+            }
+          }
+            @media screen and (min-width: 1270px) {
+              #heading h2 {
+                font-size: 2.3em;
+              }
+              h2{
+                font-size: 1.5em;
+              }
+                #header article {
+                  display: flex;
+                  flex: 0 1;
+                }
+                nav a {
+                  padding: 0.7em 0;
+                  margin: 0.7%;
+                }
+              }
