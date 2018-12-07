@@ -198,6 +198,10 @@ figcaption {
 /* State style (media queries) */
 
 @media screen and (min-width: 99px) {
+  html {
+    font-size: 1.31em; /*21px /*16 = 1.31em */
+    line-height: 1.38em; /*29px /*21 = 1.38em */
+  }
   body #header {
       display: flex;
       flex-flow: column;
@@ -209,6 +213,10 @@ figcaption {
   }
 }
 @media screen and (min-width: 250px) {
+  #content p figcaption{
+    font-size: 0.8em; /*21px /*16 = 1.31em */
+    line-height: 1.3em; /*29px /*21 = 1.38em */
+  }
   body #header {
       display: grid;
     }
@@ -222,30 +230,26 @@ figcaption {
     }
   }
 @media screen and (min-width: 440px) {
-  html {
-    font-size: 1.31em; /*21px /*16 = 1.31em */
-    line-height: 1.38em; /*29px /*21 = 1.38em */
+  #content p figcaption{
+    font-size: 1.3em; /*21px /*16 = 1.31em */
+    line-height: 1.5em; /*29px /*21 = 1.38em */
   }
   body #header {
       display: grid;
     }
-#header article {
-    display: flex;
-    flex: 0 1;
-  }
   h2 {
     font-size: 1em;
     margin-right: 0.2em;
   }
   #heading h2 {
-    font-size: 0.85em;
+    font-size: 1em;
   }
   #heading img {
     padding-top: 0.45em;
   }
   nav a {
-    padding: 0.7em 0;
-    margin: 0.8%;
+    padding: 1em 0;
+    margin: 5%;
   }
   #navigation a {
     line-height: 1.75em; /*28px /*16 = 1.75em */
@@ -275,6 +279,30 @@ figcaption {
     line-height: 2em;
   }
 }
+  @media screen and (min-width: 520px) {
+    html {
+      font-size: 1.31em; /*21px /*16 = 1.31em */
+      line-height: 1.38em; /*29px /*21 = 1.38em */
+    }
+    #header article {
+      display: flex;
+      flex: 0 1;
+    }
+    #heading h2 {
+      font-size: 1em;
+      margin-right: 0.2em;
+    }
+    #heading img {
+      padding-top: 0.35em;
+    }
+    nav a {
+      padding: 0.6em 0;
+      margin: 0.5%;
+    }
+    #navigation a {
+      line-height: 2em;
+    }
+  }
   @media screen and (min-width: 600px) {
     html {
       font-size: 1.31em; /*21px /*16 = 1.31em */
@@ -366,6 +394,7 @@ nav a {
         }
       }
         @media screen and (min-width: 1226px) {
+
           #heading h2 {
             font-size: 2.1em;
           }
@@ -382,6 +411,9 @@ nav a {
             }
           }
             @media screen and (min-width: 1270px) {
+              p{
+                font-size: 2em;
+              }
               #heading h2 {
                 font-size: 2.3em;
               }
