@@ -20,16 +20,13 @@ figcaption {
   font-size: 0.875em;
   line-height: 1.07em;
   text-align: center;
+  padding-bottom: 1em;
 }
 h2 {
-    font-family: "Acme", Helvetica , Arial, sans-serif;
+  font-family: "Open Sans", Helvetica , Arial, sans-serif;
   font-size: 1.4em;
   line-height: 1.28em; /* 36px /  28px= 1.28em*/
   font-weight: bold;
-}
-p {
-  font-size: 1.125em; /*18px /*16 = 1.125em */
-  line-height: 1.222em; /* 22px /  18px= 1.222...em*/
 }
 ul {
   color: #000000;
@@ -59,6 +56,10 @@ article {
 #heading {
   grid-column: 1/1;
   grid-row: 1;
+  background-color: #990033;
+  border-radius: 2%;
+  color: #000000;
+  padding: 2%;
 }
 #navigation {
   grid-column: 2/2;
@@ -84,7 +85,28 @@ article {
   grid-column: 1/3;
   grid-row: 2;
 }
-
+nav a {
+  padding: 1.2em 0;
+  margin: 3.5%;
+  background: #990033;
+  border: 1px solid #999999;
+  border-radius: 0.5em;
+  color: #ffffff;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+.js a {
+  color: white;
+}
+.about #nav-abo,
+.projects #nav-pro,
+.contact #nav-cont,
+nav a:active,
+nav a:focus {
+  background: #999999;
+  color: #ffffff;
+}
 #subnavigation a {
   display: flex;
   flex: 2;
@@ -99,14 +121,25 @@ article {
   display: flex;
   flex: 2;
 }
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+a img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
 #primary img {
   display: flex;
   flex: 2;
   padding: 0.75em 0;
   margin-top: 2%;
 }
-#primary p{
-  font-size: 0.7em;
+#primary p {
+  font-size: 1.125em;
+  line-height: 1.222em; /* 22px /  18px= 1.222...em*/
 }
 #link-gmail {
   margin: 2%;
@@ -114,45 +147,13 @@ article {
 #link-github {
   margin-top: 2%;
 }
-a img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-}
 /* styles codes (id selectors) */
-#heading{
-  background-color: #990033;
-  border-radius: 2%;
-  color: #000000;
-  padding: 2%;
-}
 #primary, #navigation {
-  background-color:  #3d5c5c;
+  background-color: #3d5c5c;
   border-radius: 2%;
   color: #ffffff;
   padding: 4%;
 }
-
-nav a {
-  padding: 1.2em 0;
-  margin: 3.5%;
-  background: #990033;
-  border: 1px solid #999999;
-  border-radius: 0.5em;
-  color: #ffffff;
-  display: block;
-  text-align: center;
-  text-decoration: none;
-}
-.about #nav-abo,
-.projects #nav-pro,
-.contact #nav-cont,
-nav a:active,
-nav a:focus {
-  background: #999999;
-  color: #ffffff;
-}
-
 #heading h2, #contact a, #projects h2 {
   color: #ffffff;
 }
@@ -173,14 +174,6 @@ nav li {
   width: 100%;
   float: left;
 }
-img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-}
-figcaption {
-  padding-bottom: 1em;
-}
 /* State Styles */
 .nojs {
   border-top: 1.25em solid red;
@@ -192,51 +185,43 @@ figcaption {
 .js #action.visible {
   display: block;
 }
-.js a{
-  color: white;
-}
 /* State style (media queries) */
 
-@media screen and (min-width: 99px) {
+@media screen and (min-width: 120px) {
+  html {
+    font-size: 0.85em; /*21px /*16 = 1.31em */
+    line-height: 1.38em; /*29px /*21 = 1.38em */
+  }
+  body #header {
+    display: flex;
+    flex-flow: column;
+  }
+}
+@media screen and (min-width: 250px) {
+  html {
+    font-size: 1.2em; /*21px /*16 = 1.31em */
+    line-height: 1.38em; /*29px /*21 = 1.38em */
+  }
+  body #header {
+    display: grid;
+  }
+  #heading h2 {
+    padding-top: 0.3em;
+    font-size: 1em;
+  }
+  nav a {
+    padding: 1em 0;
+    margin: 5%;
+  }
+}
+@media screen and (min-width: 440px) {
   html {
     font-size: 1.31em; /*21px /*16 = 1.31em */
     line-height: 1.38em; /*29px /*21 = 1.38em */
   }
   body #header {
-      display: flex;
-      flex-flow: column;
+    display: grid;
   }
- h2 {
-    display: flex;
-    font-size: 1.01em;
-    margin-right: 0.2em;
-  }
-}
-@media screen and (min-width: 250px) {
-  #content p figcaption{
-    font-size: 0.8em; /*21px /*16 = 1.31em */
-    line-height: 1.3em; /*29px /*21 = 1.38em */
-  }
-  body #header {
-      display: grid;
-    }
-    #heading h2 {
-      padding-top: 0.3em;
-      font-size: 1em;
-    }
-    nav a {
-      padding: 1em 0;
-      margin: 5%;
-    }
-  }
-@media screen and (min-width: 440px) {
-  #content p figcaption{
-    font-size: 1.3em; /*21px /*16 = 1.31em */
-    line-height: 1.5em; /*29px /*21 = 1.38em */
-  }
-  body #header {
-      display: grid;
-    }
   h2 {
     font-size: 1em;
     margin-right: 0.2em;
@@ -279,153 +264,153 @@ figcaption {
     line-height: 2em;
   }
 }
-  @media screen and (min-width: 520px) {
-    html {
-      font-size: 1.31em; /*21px /*16 = 1.31em */
-      line-height: 1.38em; /*29px /*21 = 1.38em */
-    }
-    #header article {
-      display: flex;
-      flex: 0 1;
-    }
-    #heading h2 {
-      font-size: 1em;
-      margin-right: 0.2em;
-    }
-    #heading img {
-      padding-top: 0.35em;
-    }
-    nav a {
-      padding: 0.6em 0;
-      margin: 0.5%;
-    }
-    #navigation a {
-      line-height: 2em;
-    }
+@media screen and (min-width: 520px) {
+  html {
+    font-size: 1.31em; /*21px /*16 = 1.31em */
+    line-height: 1.38em; /*29px /*21 = 1.38em */
   }
-  @media screen and (min-width: 600px) {
-    html {
-      font-size: 1.31em; /*21px /*16 = 1.31em */
-      line-height: 1.38em; /*29px /*21 = 1.38em */
-    }
-    #header article {
-      display: flex;
-      flex: 0 1;
-    }
-    #heading h2 {
-      font-size: 1.3em;
-      margin-right: 0.2em;
-    }
+  #header article {
+    display: flex;
+    flex: 0 1;
+  }
+  #heading h2 {
+    font-size: 1em;
+    margin-right: 0.2em;
+  }
+  #heading img {
+    padding-top: 0.35em;
+  }
+  nav a {
+    padding: 0.6em 0;
+    margin: 0.5%;
+  }
   #navigation a {
     line-height: 2em;
+  }
+}
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 1.31em; /*21px /*16 = 1.31em */
+    line-height: 1.38em; /*29px /*21 = 1.38em */
+  }
+  #header article {
+    display: flex;
+    flex: 0 1;
+  }
+  #heading h2 {
+    font-size: 1.3em;
+    margin-right: 0.2em;
+  }
+  nav a {
+    padding: 0.5em 0;
+    margin: 0.5%;
+  }
+  #navigation a {
+    line-height: 2em;
+  }
+}
+@media screen and (min-width: 800px) {
+  #heading h2 {
+    font-size: 1.8em;
+  }
+  #header article {
+    display: flex;
+    flex: 0 1;
+  }
+  nav a {
+    padding: 0.5em 0;
+    margin: 0.5%;
+  }
+  #navigation a {
+    font-size: 1.37em; /*22px /*16 = 1.37em */
+    line-height: 2em;
+  }
+}
+@media screen and (min-width: 920px) {
+  html {
+    font-size: 1.626em; /*26px /*16 = 1.625em */
+    line-height: 1.07em; /*28px /*26 = 1.07em */
+  }
+  #heading h2 {
+    font-size: 1.55em;
+  }
+  #header article {
+    display: flex;
+    flex: 0 1;
+  }
+  nav a {
+    padding: 0.4em 0;
+    margin: 0.4%;
+  }
+  #navigation a {
+    font-size: 1.37em; /*22px /*16 = 1.37em */
+    line-height: 2em;
+  }
+}
+@media screen and (min-width: 1000px) {
+  h2 {
+    font-size: 1.5em;
+  }
+  #heading h2 {
+    font-size: 1.8em;
+  }
+  #header article {
+    display: flex;
+    flex: 0 1;
   }
   nav a {
     padding: 0.5em 0;
     margin: 0.5%;
   }
 }
-  @media screen and (min-width: 800px) {
-    #heading h2 {
-      font-size: 1.8em;
-    }
-    #header article {
-      display: flex;
-      flex: 0 1;
-    }
-    #navigation a {
-      font-size: 1.37em; /*22px /*16 = 1.37em */
-      line-height: 2em;
-    }
-    nav a {
-      padding: 0.5em 0;
-      margin: 0.5%;
-    }
-  }
-  @media screen and (min-width: 920px) {
-    html {
-      font-size: 1.626em; /*26px /*16 = 1.625em */
-      line-height: 1.07em; /*28px /*26 = 1.07em */
-    }
-    #heading h2 {
-      font-size: 1.55em;
-    }
-    #header article {
-      display: flex;
-      flex: 0 1;
-    }
-    #navigation a {
-      font-size: 1.37em; /*22px /*16 = 1.37em */
-      line-height: 2em;
-    }
-    nav a {
-      padding: 0.4em 0;
-      margin: 0.4%;
-    }
-@media screen and (min-width: 1000px) {
-  #heading h2 {
-    font-size: 1.8em;
-  }
-  h2{
+@media screen and (min-width: 1180px) {
+  h2 {
     font-size: 1.5em;
   }
-#header article {
-  display: flex;
-  flex: 0 1;
-}
-nav a {
-  padding: 0.5em 0;
-  margin: 0.5%;
-}
+  #heading h2 {
+    font-size: 2.1em;
   }
-    @media screen and (min-width: 1180px) {
-      #heading h2 {
-        font-size: 2.1em;
-      }
-      h2{
-        font-size: 1.5em;
-      }
-        #header article {
-          display: flex;
-          flex: 0 1;
-        }
-        nav a {
-          padding: 0.5em 0;
-          margin: 0.5%;
-        }
-      }
-        @media screen and (min-width: 1226px) {
-
-          #heading h2 {
-            font-size: 2.1em;
-          }
-          h2{
-            font-size: 1.5em;
-          }
-            #header article {
-              display: flex;
-              flex: 0 1;
-            }
-            nav a {
-              padding: 0.5em 0;
-              margin: 0.5%;
-            }
-          }
-            @media screen and (min-width: 1270px) {
-              p{
-                font-size: 2em;
-              }
-              #heading h2 {
-                font-size: 2.3em;
-              }
-              h2{
-                font-size: 1.5em;
-              }
-                #header article {
-                  display: flex;
-                  flex: 0 1;
-                }
-                nav a {
-                  padding: 0.7em 0;
-                  margin: 0.7%;
-                }
-              }
+  #header article {
+    display: flex;
+    flex: 0 1;
+  }
+  nav a {
+    padding: 0.5em 0;
+    margin: 0.5%;
+  }
+}
+@media screen and (min-width: 1226px) {
+  h2 {
+    font-size: 1.5em;
+  }
+  #heading h2 {
+    font-size: 2.1em;
+  }
+  #header article {
+    display: flex;
+    flex: 0 1;
+  }
+  nav a {
+    padding: 0.5em 0;
+    margin: 0.5%;
+  }
+}
+@media screen and (min-width: 1270px) {
+  p {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  #heading h2 {
+    font-size: 2.3em;
+  }
+  #header article {
+    display: flex;
+    flex: 0 1;
+  }
+  nav a {
+    padding: 0.7em 0;
+    margin: 0.7%;
+  }
+}
